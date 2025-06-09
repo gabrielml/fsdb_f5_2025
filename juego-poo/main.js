@@ -11,7 +11,13 @@ class Game {
     }
 
     crearEscenario(){
-
+        this.personaje = new Personaje();
+        this.container.appendChild(this.personaje.element);
+        for(let i = 0; i < 5; i++) {
+            const moneda = new Moneda();
+            this.monedas.push(moneda);
+            this.container.appendChild(moneda.element);
+        }
     }
 
     agregarEventos(){
