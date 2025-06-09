@@ -1,4 +1,19 @@
 class Game {
+    constructor(){
+
+    }
+
+    crearEscenario(){
+
+    }
+
+    agregarEventos(){
+
+    }
+
+    checkColisiones(){
+        
+    }
 
 }
 
