@@ -4,7 +4,8 @@
 
 ### 📊 Quick facts
 
-Contains the exercises from the 6-month Full Stack Web programming course.
+- Date: 2025.05.23
+- Contains the exercises from the 6-month **F**ull **S**tack **D**eveloper **B**ootcamp.
 
 ### ℹ️ About
 
