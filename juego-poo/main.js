@@ -49,6 +49,8 @@ class Personaje {
 
         this.element = document.createElement("div");
         this.element.classList.add("personaje");
+
+        this.actualizarPosicion();
     }
     
     mover(){
