@@ -53,8 +53,15 @@ class Personaje {
         this.actualizarPosicion();
     }
     
-    mover(){
-
+    mover(evento){
+        if(evento.key === "ArrowRight"){
+            this.x += this.velocidad;
+        } else if (evento.key === "ArrowLeft"){
+            this.x -= this.velocidad;
+        } else if (evento.key === "ArrowUp") {
+            this.saltar();
+        }
+        this.actualizarPosicion();
     }
 
     saltar(){
