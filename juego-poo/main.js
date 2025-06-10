@@ -65,7 +65,19 @@ class Personaje {
     }
 
     saltar(){
+        this.saltando = true;
+        let alturaMaxima = this.y - 100;
 
+        const salto = setInterval(() => {
+            if(this.y > alturaMaxima){
+                this.y -= 10;
+            } else {
+                clearInterval(salto);
+                this.caer();
+            }
+
+            this.actualizarPosicion();
+        }, 20);
     }
 
     caer(){
