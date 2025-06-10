@@ -21,7 +21,8 @@ class Game {
     }
 
     agregarEventos(){
-
+        window.addEventListener("keydown", (e) => {this.personaje.mover(e)});
+        this.checkColisiones();
     }
 
     checkColisiones(){
