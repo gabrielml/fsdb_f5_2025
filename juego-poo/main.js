@@ -40,7 +40,15 @@ class Game {
 
 class Personaje {
     constructor(){
+        this.x = 50;
+        this.y = 300;
+        this.width = 50;
+        this.height = 50;
+        this.velocidad = 10;
+        this.saltando = false;
 
+        this.element = document.createElement("div");
+        this.element.classList.add("personaje");
     }
     
     mover(){
@@ -60,7 +68,7 @@ class Personaje {
     }
 
     colisionaCon(){
-        
+
     }
 }
 
