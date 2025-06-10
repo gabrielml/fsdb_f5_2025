@@ -26,7 +26,14 @@ class Game {
     }
 
     checkColisiones(){
-
+        setInterval(() => {
+            this.monedas.forEach((moneda, index) => {
+                if(this.personaje.colisionaCon(moneda)) {
+                    this.container.removeChild(moneda.element);
+                    this.monedas.splice(index, 1);
+                }
+            });
+        }, 100);
     }
 
 }
