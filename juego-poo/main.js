@@ -39,7 +39,29 @@ class Game {
 }
 
 class Personaje {
+    constructor(){
 
+    }
+    
+    mover(){
+
+    }
+
+    saltar(){
+
+    }
+
+    caer(){
+
+    }
+
+    actualizarPosicion(){
+
+    }
+
+    colisionaCon(){
+        
+    }
 }
 
 class Moneda {
