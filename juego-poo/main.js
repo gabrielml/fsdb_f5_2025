@@ -96,8 +96,13 @@ class Personaje {
         this.element.style.top = `${this.y}px`;
     }
 
-    colisionaCon(){
-
+    colisionaCon(objeto){
+        return (
+            this.x < objeto.x + objeto.width &&
+            this.x + this.width > objeto.x &&
+            this.y < objeto.y + objeto.height &&
+            this.y + this.height > objeto.y
+        );
     }
 }
 
