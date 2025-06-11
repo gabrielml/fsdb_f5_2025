@@ -66,7 +66,7 @@ class Personaje {
 
     saltar(){
         this.saltando = true;
-        let alturaMaxima = this.y - 100;
+        let alturaMaxima = this.y - 300;
 
         const salto = setInterval(() => {
             if(this.y > alturaMaxima){
