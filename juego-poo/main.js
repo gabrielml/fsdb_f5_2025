@@ -107,7 +107,13 @@ class Personaje {
 }
 
 class Moneda {
+    constructor(){
 
+    }
+
+    actualizarPosicion(){
+        
+    }
 }
 
 const juego = new Game();
