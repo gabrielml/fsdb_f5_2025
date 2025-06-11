@@ -58,7 +58,7 @@ class Personaje {
             this.x += this.velocidad;
         } else if (evento.key === "ArrowLeft"){
             this.x -= this.velocidad;
-        } else if (evento.key === "ArrowUp") {
+        } else if (evento.key === "ArrowUp" && !this.saltando) {
             this.saltar();
         }
         this.actualizarPosicion();
@@ -86,6 +86,7 @@ class Personaje {
                 this.y += 10;
             } else {
                 clearInterval(gravedad);
+                this.saltando = false;
             }
             this.actualizarPosicion();
         }, 20);
