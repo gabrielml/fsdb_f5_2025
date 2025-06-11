@@ -1,6 +1,7 @@
 class Game {
     constructor(){
         this.container = document.getElementById("game-container");
+        this.puntosElement = document.getElementById("puntos");
         this.personaje = null;
         this.monedas = [];
         this.puntuacion = 0;
@@ -31,9 +32,15 @@ class Game {
                 if(this.personaje.colisionaCon(moneda)) {
                     this.container.removeChild(moneda.element);
                     this.monedas.splice(index, 1);
+                    this.actualizarPuntuacion(10);
                 }
             });
         }, 100);
+    }
+
+    actualizarPuntuacion(puntos){
+        this.puntuacion += puntos;
+        this.puntosElement.textContent = `Puntos: ${this.puntuacion}`;
     }
 
 }
