@@ -108,11 +108,20 @@ class Personaje {
 
 class Moneda {
     constructor(){
+        this.x = Math.random() * 700 + 50;
+        this.y = Math.random() * 250 + 50;
 
+        this.width = 30;
+        this.height = 30;
+        
+        this.element = document.createElement("div");
+        this.element.classList.add("moneda");
+
+        this.actualizarPosicion();
     }
 
     actualizarPosicion(){
-        
+
     }
 }
 
