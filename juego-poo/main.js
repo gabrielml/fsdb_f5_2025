@@ -81,7 +81,14 @@ class Personaje {
     }
 
     caer(){
-
+        const gravedad = setInterval(() => {
+            if (this.y < 300) {
+                this.y += 10;
+            } else {
+                clearInterval(gravedad);
+            }
+            this.actualizarPosicion();
+        }, 20);
     }
 
     actualizarPosicion(){
