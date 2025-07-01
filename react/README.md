@@ -9,8 +9,8 @@ date: 2025.07.01
 
 ### Technologies
 
-<img align="left" alt="React" width="26px" src="readme_img/react-logo.svg" />
-<img align="left" alt="ViteJS" width="26px" src="readme_img/vitejs-logo.svg" />
+<a href="https://react.dev" target="_blank"><img align="left" alt="React" width="26px" src="readme_img/react-logo.svg" /></a>
+<a href="https://vite.dev" target="_blank"><img align="left" alt="ViteJS" width="26px" src="readme_img/vitejs-logo.svg" /></a>
 
 
 <br />
