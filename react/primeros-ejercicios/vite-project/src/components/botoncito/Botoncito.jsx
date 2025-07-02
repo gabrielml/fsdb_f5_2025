@@ -10,6 +10,7 @@ export const Botoncito = (props) => {
   // State to store the hex color value
   const [color, setColor] = useState("#4CAF50"); // Initial color
 
+  // TODO: (?) How we change button's color using only a "prop"?
   // Generate a random 6-digit hex string
   const randomColor = () => {
     // Math.random() generates a pseudo-random floating-point number between 0 (inclusive) and 1 (exclusive).
