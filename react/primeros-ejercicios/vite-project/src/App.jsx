@@ -5,10 +5,10 @@ function App() {
   return (
     <>
       <h1>Hello World!</h1>
-      <Botoncito/>
-      <Botoncito/>
-      <Botoncito/>
-      <Botoncito/>
+      <Botoncito number="1"/>
+      <Botoncito number="2"/>
+      <Botoncito number="3"/>
+      <Botoncito number="4"/>
     </>
   )
 }

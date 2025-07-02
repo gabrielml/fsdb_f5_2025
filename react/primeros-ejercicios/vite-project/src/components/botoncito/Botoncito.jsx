@@ -1,9 +1,9 @@
 import React from 'react'
 import './Botoncito.css'
 
-export const Botoncito = () => {
+export const Botoncito = (props) => {
   return (
-    <button className="botoncito">Mi primer Botoncito</button>
+    <button className="botoncito">Mi primer Botoncito {props.number}</button>
   )
 }
 
