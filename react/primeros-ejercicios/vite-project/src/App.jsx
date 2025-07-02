@@ -1,5 +1,6 @@
 import './App.css'
 import Botoncito from './components/botoncito/Botoncito.jsx'
+import Card from './components/card/Card.jsx'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Botoncito number="2"/>
       <Botoncito number="3"/>
       <Botoncito number="4"/>
+      <Card/>
     </>
   )
 }
