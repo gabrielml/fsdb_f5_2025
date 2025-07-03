@@ -1,6 +1,6 @@
 import './App.css'
-import Botoncito from './components/botoncito/Botoncito.jsx'
-import Card from './components/card/Card.jsx'
+import Botoncito from './components/Botoncito/Botoncito.jsx'
+import Card from './components/Card/Card.jsx'
 
 function App() {
   return (
