@@ -6,6 +6,8 @@ date: 2025.07.01
 
 - [Primeros Ejercicios React](https://drive.google.com/file/d/10kuZpYD6nKE3UmBQiXzSG-xqKDMsIcO_/view?usp=sharing)
 - [React](https://drive.google.com/file/d/1cbAWeZL5KMCk-VCVAwHqEwyDflF72S-x/view?usp=sharing)
+- [React Ejercicios Segunda parte](https://drive.google.com/file/d/1q2T6fP9EmUBMNHLNK-wgku5n3z93fNnf/view?usp=sharing)
+- [React Contador de Clics](https://drive.google.com/file/d/1DaIFQ40Nflf3RVR0EyDuRmrozVsaj66E/view?usp=sharing)
 
 ### Technologies
 
