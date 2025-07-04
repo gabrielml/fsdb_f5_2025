@@ -1,4 +1,4 @@
-// import "./Card.css";
+import "./Card.css";
 
 const user = {
   name: "Hedy Lamarr",
