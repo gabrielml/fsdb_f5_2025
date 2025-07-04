@@ -1,8 +1,17 @@
+import { useState } from "react";
 import "./App.css";
 import Botoncito from "./components/Botoncito/Botoncito.jsx";
 import Card from "./components/Card/Card.jsx";
 
 function App() {
+  // State to manage the theme of the cards
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Function to toggle the theme
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   const user1 = {
     name: "Hedy Lamarr",
     title: "Actress & Inventor",
@@ -39,7 +48,12 @@ function App() {
       <Botoncito number="2" />
       <Botoncito number="3" />
       <Botoncito number="4" />
-      
+
+      {/* Button to toggle dark mode */}
+      <button onClick={toggleTheme} style={{ margin: "20px", padding: "10px" }}>
+        Toggle Card Theme to {!isDarkMode ? "Dark" : "Light"}
+      </button>
+
       {/* TODO: Use an advance approach to store the user data in an array and use the map() function to render the Card components dynamically! */}
       <Card
         name={user1.name}
@@ -47,6 +61,7 @@ function App() {
         about={user1.about}
         imageUrl={user1.imageUrl}
         imageSize={user1.imageSize}
+        isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
       />
       <Card
         name={user2.name}
@@ -54,6 +69,7 @@ function App() {
         about={user2.about}
         imageUrl={user2.imageUrl}
         imageSize={user2.imageSize}
+        isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
       />
       <Card
         name={user3.name}
@@ -61,6 +77,7 @@ function App() {
         about={user3.about}
         imageUrl={user3.imageUrl}
         imageSize={user3.imageSize}
+        isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
       />
     </>
   );

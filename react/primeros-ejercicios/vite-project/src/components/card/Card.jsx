@@ -9,14 +9,17 @@ import "./Card.css";
 //   imageSize: 125,
 // };
 
-export default function Card({name, title, about, imageUrl, imageSize}) {
+export default function Card({name, title, about, imageUrl, imageSize, isDarkMode}) {
   const handleClick = () => {
     alert(`You clicked on the card for ${name}!`);
   }
+
+  // Conditionally apply a class based on isDarkMode prop
+  const cardClassName = isDarkMode ? "profile-card dark-mode" : "profile-card";
   
   return (
     <>
-      <div className="profile-card">
+      <div className={cardClassName}>
         <img
           className="profile-img"
           src={imageUrl}
