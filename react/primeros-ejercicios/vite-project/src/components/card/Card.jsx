@@ -10,6 +10,10 @@ import "./Card.css";
 // };
 
 export default function Card({name, title, about, imageUrl, imageSize}) {
+  const handleClick = () => {
+    alert(`You clicked on the card for ${name}!`);
+  }
+  
   return (
     <>
       <div className="profile-card">
@@ -26,6 +30,7 @@ export default function Card({name, title, about, imageUrl, imageSize}) {
           <h1 className="profile-name">{name}</h1>
           <h2 className="profile-title">{title}</h2>
           <p className="profile-about">{about}</p>
+          <button className="card-button" onClick={handleClick}>Learn More</button>
         </div>
       </div>
     </>
