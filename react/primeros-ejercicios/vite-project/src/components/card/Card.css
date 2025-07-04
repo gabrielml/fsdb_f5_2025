@@ -1,3 +1,4 @@
+/* ## Light mode styles */
 .profile-card {
     font-family: System-ui, Helvetica, sans-serif;
     border: 1px solid #ccc;
@@ -9,16 +10,13 @@
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 10px 5px 5px gainsboro;
-}
-
-/* Dark mode styles */
-.profile-card.dark-mode {
-    background-color: #333; /* Dark background */
+    transition: background-color 3s ease, color 3s ease, box-shadow 3s ease; /* Light/Dark theme Smooth transition */
 }
 
 .profile-img {
     border-radius: 50%;
     margin: 0 auto;
+    transition: border 1s ease-out; /* Light/Dark theme Smooth transition */
 }
 
 .profile-info {
@@ -38,8 +36,42 @@
     cursor: pointer;
     margin-top: 10px; /* Space from the text above */
     font-size: 16px;
+    transition: background-color 1s ease; /* Light/Dark theme & button state Smooth transition */
 }
 
 .card-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* ## Dark mode styles */
+.profile-card.dark-mode {
+    background-color: #333; /* Dark background */
+    color: #f0f0f0; /* Light text */
+    border-color: #555;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ### Dark mode image border */
+.profile-card.dark-mode .profile-img {
+    border: 2px solid #bbb;
+}
+
+/* ### Dark mode name color */
+.profile-card.dark-mode .profile-name {
+    color: #88ccff;
+}
+
+/* ### Dark mode title color */
+.profile-card.dark-mode .profile-title {
+    color: #bbb
+}
+
+/* ### Dark mode button styles */
+.profile-card.dark-mode .card-button {
+    background-color: #555;
+}
+
+.profile-card.dark-mode .card-button:hover {
+    background-color: #777;
 }
