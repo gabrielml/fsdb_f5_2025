@@ -42,44 +42,52 @@ function App() {
   };
 
   return (
-    <>
-      <h1>Hello World!</h1>
-      <Botoncito number="1" />
-      <Botoncito number="2" />
-      <Botoncito number="3" />
-      <Botoncito number="4" />
+    /* Main container for the app content*/
+    <div className="app-container">
+      <h1 className="app-title">Hello World!</h1>
+
+      {/* Group Botoncitos for smaller spacing between them */}
+      <div className="button-group">
+        <Botoncito number="1" />
+        <Botoncito number="2" />
+        <Botoncito number="3" />
+        <Botoncito number="4" />
+      </div>
 
       {/* Button to toggle dark mode */}
-      <button onClick={toggleTheme} style={{ margin: "20px", padding: "10px" }}>
+      <button className="theme-toggle-button" onClick={toggleTheme}>
         Toggle Card Theme to {!isDarkMode ? "Dark" : "Light"}
       </button>
 
       {/* TODO: Use an advance approach to store the user data in an array and use the map() function to render the Card components dynamically! */}
-      <Card
-        name={user1.name}
-        title={user1.title}
-        about={user1.about}
-        imageUrl={user1.imageUrl}
-        imageSize={user1.imageSize}
-        isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
-      />
-      <Card
-        name={user2.name}
-        title={user2.title}
-        about={user2.about}
-        imageUrl={user2.imageUrl}
-        imageSize={user2.imageSize}
-        isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
-      />
-      <Card
-        name={user3.name}
-        title={user3.title}
-        about={user3.about}
-        imageUrl={user3.imageUrl}
-        imageSize={user3.imageSize}
-        isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
-      />
-    </>
+      {/* Cards container for responsiveness and consistent spacing between cards */}
+      <div className="cards-container">
+        <Card
+          name={user1.name}
+          title={user1.title}
+          about={user1.about}
+          imageUrl={user1.imageUrl}
+          imageSize={user1.imageSize}
+          isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
+        />
+        <Card
+          name={user2.name}
+          title={user2.title}
+          about={user2.about}
+          imageUrl={user2.imageUrl}
+          imageSize={user2.imageSize}
+          isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
+        />
+        <Card
+          name={user3.name}
+          title={user3.title}
+          about={user3.about}
+          imageUrl={user3.imageUrl}
+          imageSize={user3.imageSize}
+          isDarkMode={isDarkMode} /* Pass the isDarkMode prop */
+        />
+      </div>
+    </div>
   );
 }
 
