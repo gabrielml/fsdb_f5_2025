@@ -1,12 +1,30 @@
-# React + Vite
+# React
+date: 2025.07.13
+## 📊 Quick facts
+Here you'll find my first exercises with React, just the first part!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I hope you enjoy them! 😊
 
-Currently, two official plugins are available:
+### Exercises based on
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Primeros Ejercicios React](https://drive.google.com/file/d/10kuZpYD6nKE3UmBQiXzSG-xqKDMsIcO_/view?usp=sharing)
+- [React](https://drive.google.com/file/d/1cbAWeZL5KMCk-VCVAwHqEwyDflF72S-x/view?usp=sharing)
 
-## Expanding the ESLint configuration
+### Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<a href="https://react.dev" target="_blank"><img align="left" alt="React" width="26px" src="./src/assets/react.svg" /></a>
+<a href="https://vite.dev" target="_blank"><img align="left" alt="ViteJS" width="26px" src="./public/vite.svg" /></a>
+
+
+<br />
+
+### Trainer
+
+- [🐱](https://www.linkedin.com/in/anaisvillanueva/)
+
+
+## ℹ️ About
+
+This project is part of the [Full Stack Web Development training program](https://factoriaf5.org/aprende/desarrollo-web-full-stack-asturias/) in [Asturias](https://www.britannica.com/place/Asturias-region-Spain), offered by [Factoría F5](https://factoriaf5.org/).
+
+The curriculum covers a wide range of topics, from basic programming languages ​​and UX principles to advanced project development techniques. It includes front-end and back-end technologies, agile methodologies, and tools for user experience design and database development. The program also focuses on essential soft skills such as communication, problem-solving, teamwork, adaptability, and time management.
