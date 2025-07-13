@@ -105,3 +105,42 @@
         gap: 1.5rem; /* Slightly reduced gap between cards */
     }
 }
+
+/* Responsive adjustement for Mobile devices */
+@media (max-width: 768px) {
+    #root {
+        padding: 1rem;
+    }
+
+    .app-container {
+        gap: 1.5rem;
+    }
+
+    .app-title {
+        font-size: 2.5em;
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        width: 80%; /* Maje buttons take up more width when stacked */
+        gap: 0.5rem; /* Very small gap between stacked buttons */
+    }
+
+    /* Ensure 'Botoncito' buttons take full width when stacked */
+    .button-group .botoncito {
+        width: 100%;
+        margin-bottom: 0.5rem; /* Separate the buttons for easier manipulation */
+    }
+
+    .theme-toggle-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        margin-bottom: 1.5rem;
+    }
+
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center; /* Center stacked cards */
+        gap: 1rem; /* Spacing between stacked cards */
+    }
+}
