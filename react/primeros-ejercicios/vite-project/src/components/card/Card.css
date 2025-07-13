@@ -77,6 +77,13 @@
 }
 
 /* ## Media Query */
+/* Responsive adjustement for Mobile devices */
+@media (max-width: 768px) {
+    .profile-card {
+        max-width: 80%;
+    }
+}
+
 /* Responsive adjustments for very small mobile screens */
 /* It completes an equivalent media query in the 'App.css' file */
 @media (max-width: 480px) {
