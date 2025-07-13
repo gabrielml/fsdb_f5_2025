@@ -75,3 +75,26 @@
 .profile-card.dark-mode .card-button:hover {
     background-color: #777;
 }
+
+/* ## Media Query */
+/* Responsive adjustments for very small mobile screens */
+/* It completes an equivalent media query in the 'App.css' file */
+@media (max-width: 480px) {
+    .profile-card {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+    }
+
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+}
