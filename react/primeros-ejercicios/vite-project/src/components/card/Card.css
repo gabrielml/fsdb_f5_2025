@@ -2,7 +2,7 @@
 .profile-card {
     font-family: System-ui, Helvetica, sans-serif;
     border: 1px solid #ccc;
-    max-width: 50%;
+    max-width: 30%;
     display: grid;
     grid-template-columns: 1fr 2fr; /* Two columns, image takes 1/3, text takes 2/3 */
     gap: 1rem; /* Space between grid items*/
@@ -14,8 +14,9 @@
 }
 
 .profile-img {
+    align-self: flex-start;
+    margin-top: 24px;
     border-radius: 50%;
-    margin: 0 auto;
     transition: border 1s ease-out; /* Light/Dark theme Smooth transition */
 }
 
@@ -77,6 +78,8 @@
 }
 
 /* ## Media Query */
+
+
 /* Responsive adjustement for Mobile devices */
 @media (max-width: 768px) {
     .profile-card {
