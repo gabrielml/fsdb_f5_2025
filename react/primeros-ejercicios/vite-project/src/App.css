@@ -1,0 +1,76 @@
+/* App.css */
+
+/*
+    Note: @import 'normalize.css'; and the universal reset (*)
+    are now handled in 'index.css'.
+    This file focuses on App-specific layout and components.
+*/
+
+/* Base styles for the root element where my React App mounts */
+/* This was previously in 'App.css' but ideally might go to 'index.css' if it's tryly global for '#root' */
+/* Keeping it here for now as it influences the App component's direct container */
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Ensure the App takes at least the full viewport height */
+  padding: 2rem; /* Initial padding for the whole App */
+  max-width: 1280px; /* Limit the content width for large screens */
+  margin: 0 auto; /* Center the content horizontaly */
+}
+
+/* App Container (The main wrapper for App.jsx content) */
+.app-container {
+  width: 100%; /* Take full width of its parent (#root) */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically by default */
+  align-items: center; /* Center items horizontally within the container */
+  gap: 2.5rem; /* Larger spacing between main, unrelated sections (title, button group, toogle button & cards) */
+}
+
+/* App Title */
+.app-title {
+  font-size: 3.5em;
+  color: #2c3e50;
+  margin-bottom: 0.5rem; /* A little space below the title, before the next section */
+  text-align: center;
+}
+
+/* Button Group (Container for 'Botoncitos' */
+.button-group {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to next line on small screens */
+  justify-content: center; /* Center buttons within the group */
+  gap: 0.8rem; /* Smaller spacing between related buttons */
+  margin-bottom: 1.5rem; /* Larger spacing after the button group, before unrelated elements */
+}
+
+/* Theme Toggle Button */
+.theme-toggle-button {
+  background-color: #5a6268; /* A neutral grey */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.05em;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2.5rem; /* Larger spacing before the cards */
+  white-space: nowrap; /* Prevent text wrapping inside the button*/
+}
+
+.theme-toggle-button:hover {
+  background-color: #6c757d; /* A neutral grey */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Cads Container for Responsiveness */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center cards when they don't foll the row */
+  gap: 2rem;
+  width: 100%; /* Take full width of its parent (.app-container) */
+  max-width: 100%; /* Ensure it doesn't overflow */
+}
