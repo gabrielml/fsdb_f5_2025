@@ -143,4 +143,27 @@
         align-items: center; /* Center stacked cards */
         gap: 1rem; /* Spacing between stacked cards */
     }
+    
+    /* Responsive adjustement for very small mobile screens */
+    @media (max-width: 480px) {
+        #root {
+            padding: 0.8rem;
+        }
+
+        .app-title {
+            font-size: 2em;
+        }
+
+        .app-container {
+            gap: 1rem;
+        }
+
+        .button-group {
+            width: 90%; /* Even wider buttons on tiny screens */
+        }
+
+        .theme-toggle-button {
+            font-size: 0.85em;
+        }
+    }
 }
