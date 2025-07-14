@@ -1,17 +1,98 @@
-.stopwatch-container {
-    border: 1px solid black;
-    background-color: antiquewhite;
+/* Stopwatch.css */
+
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem; 
+    background-color: #ffffff; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    border-radius: 0.75rem; 
+    max-width: 28rem; 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+    border: 1px solid #93c5fd; 
+    box-sizing: border-box;
+}
+
+.stopwatch__title {
+    font-size: 1.875rem; 
+    font-weight: 700;
+    margin-bottom: 1rem; 
+    color: #1f2937; 
+}
+
+.stopwatch__display {
+    font-size: 3.75rem; 
+    font-family: 'SF Mono', 'Roboto Mono', monospace; 
+    margin-bottom: 1rem; 
+    transition: color 0.3s ease-in-out;
 }
 
 /* Modifier classes for timer color */
 .stopwatch__display--green {
-    color: #22c55e; /* Green color */
+    color: #22c55e; 
 }
 
 .stopwatch__display--yellow {
-    color: #eab308; /* Yellow color */
+    color: #eab308; 
 }
 
 .stopwatch__display--red {
-    color: #ef4444; /* Red color */
+    color: #ef4444; 
+}
+
+.stopwatch__message {
+    font-size: 1.125rem; 
+    margin-bottom: 1.5rem; 
+    color: #4b5563; 
+}
+
+.stopwatch__controls {
+    display: flex;
+    gap: 1rem; 
+
+.stopwatch__button {
+    padding: 0.75rem 1.5rem; 
+    border-radius: 9999px; 
+    color: #ffffff; 
+    font-weight: 600; 
+    font-size: 1.125rem; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.stopwatch__button:hover {
+    transform: scale(1.05); 
+}
+
+/* Modifier classes for button colors */
+.stopwatch__button--primary {
+    background-color: #2563eb; 
+}
+
+.stopwatch__button--primary:hover {
+    background-color: #1d4ed8; 
+}
+
+.stopwatch__button--secondary {
+    background-color: #9ca3af; 
+}
+
+.stopwatch__button--secondary:hover {
+    background-color: #6b7280; 
+}
+
+.stopwatch__button--tertiary {
+    background-color: #9333ea; 
+}
+
+.stopwatch__button--tertiary:hover {
+    background-color: #7e22ce; 
 }

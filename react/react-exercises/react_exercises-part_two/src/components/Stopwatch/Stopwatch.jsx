@@ -123,7 +123,7 @@ export const Stopwatch = () => {
         if (isCountdownActive) {
             return 'remaining!!!';
         }
-        
+
         if (seconds === 0) {
             return 'What are you waiting for? 👇';
         } else if (seconds > 0 && seconds < 10){
@@ -136,16 +136,16 @@ export const Stopwatch = () => {
     };
 
   return (
-    <div className='stopwatch-container'>
-        <h2>My Stopwatch</h2>
+    <div className='stopwatch'>
+        <h2 className='stopwatch__title'>My Stopwatch</h2>
         <div className={`stopwatch__display ${getTimerColorClass()}`}>
             {isCountdownActive ? countdown : seconds} seconds
         </div>
-        <p>{getDynamicMessage()}</p>
+        <p className='stopwatch__message'>{getDynamicMessage()}</p>
         <div>
-            <button onClick={toggleRunning}>[Start/Stop]</button>
-            <button onClick={resetStopwatch}>Reset</button>
-            <button onClick={startCountdown}>Countdown</button>
+            <button className='stopwatch__button stopwatch__button--primary' onClick={toggleRunning}>[Start/Stop]</button>
+            <button className='stopwatch__button stopwatch__button--secondary' onClick={resetStopwatch}>Reset</button>
+            <button className='stopwatch__button stopwatch__button--tertiary' onClick={startCountdown}>Countdown</button>
         </div>
     </div>
   )
