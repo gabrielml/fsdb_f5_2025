@@ -118,12 +118,30 @@ export const Stopwatch = () => {
         setCountdown(30); // Start from 30 seconds
     }
 
+    // Determine the message based on time for the stopwatch
+    const getDynamicMessage = () => {
+        if (isCountdownActive) {
+            return 'remaining!!!';
+        }
+        
+        if (seconds === 0) {
+            return 'What are you waiting for? 👇';
+        } else if (seconds > 0 && seconds < 10){
+            return 'Great progress!';
+        } else if (seconds >= 10 && seconds <= 20) {
+            return 'Almost there!';
+        } else {
+            return 'Time\'s up!';
+        }
+    };
+
   return (
     <div className='stopwatch-container'>
         <h2>My Stopwatch</h2>
         <div className={`stopwatch__display ${getTimerColorClass()}`}>
             {isCountdownActive ? countdown : seconds} seconds
         </div>
+        <p>{getDynamicMessage()}</p>
         <div>
             <button onClick={toggleRunning}>[Start/Stop]</button>
             <button onClick={resetStopwatch}>Reset</button>
