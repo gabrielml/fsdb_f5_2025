@@ -2,6 +2,11 @@ import React, { useState, useEffect, useRef } from 'react'
 import './Stopwatch.css'
 
 // Stopwatch Component
+/**
+ * Stopwatch Component.
+ * A great component that displays the elapsed time!
+ *
+ */
 export const Stopwatch = () => {
     // State for the 'Elapsed Time' in seconds
     const [seconds, setSeconds] = useState(0);
