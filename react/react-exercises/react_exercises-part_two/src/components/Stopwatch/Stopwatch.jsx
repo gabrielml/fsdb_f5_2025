@@ -12,9 +12,15 @@ export const Stopwatch = () => {
     const [seconds, setSeconds] = useState(0);
     // State to control if the stopwatch is 'Running' or 'Paused'
     const [isRunning, setIsRunning] = useState(false);
+    // State for the countdown timer (Advanced Level Exercise)
+    const [countdown, setCountdown] = useState(30);
+    // State to control if the countdown is active
+    const [isCountdownActive, setIsCountdownActive] = useState(false);
 
     // 'useRef' to hold the 'interval ID', so it persists across renders without causing re-renders
     const intervalRef = useRef(null);
+    // 'useRef' to hold the countdown 'interval ID'
+    const countdownIntervalRef = useRef(null);
 
     // 'useEffect' Hook for the stopwatch logic
     useEffect(() => {
@@ -35,9 +41,30 @@ export const Stopwatch = () => {
         return () => clearInterval(intervalRef.current);
     }, [isRunning]) // Dependency array: Effect re-runs ONLY!!! when 'isRunning' changes.
 
+    // useEffect Hook for the countdown logic
+    useEffect(() => {
+        if (isCountdownActive && countdown > 0) {
+            countdownIntervalRef.current = setInterval(() => {
+                setCountdown(prevCountdown => prevCountdown -1);
+            }, 1000);
+        } else if(countdown === 0 && isCountdownActive) {
+            // Stop countdown when it reaches 0
+            clearInterval(countdownIntervalRef.current);
+            setIsCountdownActive(false);
+        } else {
+            clearInterval(countdownIntervalRef.current);
+        }
+
+        return () => clearInterval(countdownIntervalRef.current);
+    },[isCountdownActive, countdown]); // Dependencies: Effect re-runs ONLY when these change.
+
     // Function to toggle between running and paused states
     const toggleRunning = () => {
         setIsRunning(prevIsRunning => !prevIsRunning);
+        // If countdown is active and we toggle running, stop countdown too
+        if (isCountdownActive) {
+            setIsCountdownActive(false);
+        }
     }
 
     // Function to Reset the stopwatch
@@ -45,6 +72,10 @@ export const Stopwatch = () => {
         clearInterval(intervalRef.current); // Ensure interval is cleared
         setSeconds(0); // Reset seconds to 0
         setIsRunning(false); // Set running state to false
+        // Also reset countdown if it was active
+        clearInterval(countdownIntervalRef.current);
+        setCountdown(30);
+        setIsCountdownActive(false);
     }
 
     // *** INTERMEDIATE LEVEL ***
@@ -79,15 +110,24 @@ export const Stopwatch = () => {
         }
     };
 
+    // *** ADVANCED LEVEL ***
+    // Function to start countdown
+    const startCountdown = () => {
+        resetStopwatch(); // First, reset stopwatch
+        setIsCountdownActive(true);
+        setCountdown(30); // Start from 30 seconds
+    }
+
   return (
     <div className='stopwatch-container'>
         <h2>My Stopwatch</h2>
         <div className={`stopwatch__display ${getTimerColorClass()}`}>
-            [Elapsed time: {seconds} seconds]
+            {isCountdownActive ? countdown : seconds} seconds
         </div>
         <div>
             <button onClick={toggleRunning}>[Start/Stop]</button>
             <button onClick={resetStopwatch}>Reset</button>
+            <button onClick={startCountdown}>Countdown</button>
         </div>
     </div>
   )
