@@ -1,5 +1,6 @@
 import './App.css'
 import { Stopwatch } from './components/Stopwatch/Stopwatch'
+import { ReactionGame } from './components/ReactionGame/ReactionGame'
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
       <h1 className='app__title'>Welcome to React exercises part 2</h1>
       <div className='app__container'>
         <Stopwatch/>
-        {/* <ReactionGame/> */}
+        <ReactionGame/>
       </div>
     </div>
   )
