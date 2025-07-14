@@ -143,7 +143,7 @@ export const Stopwatch = () => {
         </div>
         <p className='stopwatch__message'>{getDynamicMessage()}</p>
         <div>
-            <button className='stopwatch__button stopwatch__button--primary' onClick={toggleRunning}>[Start/Stop]</button>
+            <button className='stopwatch__button stopwatch__button--primary' onClick={toggleRunning}>{isRunning ? 'Stop' : 'Start'}</button>
             <button className='stopwatch__button stopwatch__button--secondary' onClick={resetStopwatch}>Reset</button>
             <button className='stopwatch__button stopwatch__button--tertiary' onClick={startCountdown}>Countdown</button>
         </div>
