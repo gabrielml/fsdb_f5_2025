@@ -68,12 +68,21 @@ export const Stopwatch = () => {
         }
     }, [seconds, isRunning]); // Play sound when seconds reach 10 and stopwatch is running.
 
-
+    // It should change the color of the timer based on seconds for the stopwatch
+    const getTimerColorClass = () => {
+        if (seconds < 10) {
+            return 'stopwatch__display--green'; // Less than 10 seconds
+        } else if (seconds >= 10 && seconds <= 20){
+            return 'stopwatch__display--yellow'; // Between 10 and 20 seconds
+        } else {
+            return 'stopwatch__display--red'; // More than 20 seconds
+        }
+    };
 
   return (
     <div className='stopwatch-container'>
         <h2>My Stopwatch</h2>
-        <div>
+        <div className={`stopwatch__display ${getTimerColorClass()}`}>
             [Elapsed time: {seconds} seconds]
         </div>
         <div>

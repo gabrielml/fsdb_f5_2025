@@ -2,3 +2,16 @@
     border: 1px solid black;
     background-color: antiquewhite;
 }
+
+/* Modifier classes for timer color */
+.stopwatch__display--green {
+    color: #22c55e; /* Green color */
+}
+
+.stopwatch__display--yellow {
+    color: #eab308; /* Yellow color */
+}
+
+.stopwatch__display--red {
+    color: #ef4444; /* Red color */
+}
