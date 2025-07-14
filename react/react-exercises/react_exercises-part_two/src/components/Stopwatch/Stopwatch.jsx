@@ -40,6 +40,13 @@ export const Stopwatch = () => {
         setIsRunning(prevIsRunning => !prevIsRunning);
     }
 
+    // Function to Reset the stopwatch
+    const resetStopwatch = () => {
+        clearInterval(intervalRef.current); // Ensure interval is cleared
+        setSeconds(0); // Reset seconds to 0
+        setIsRunning(false); // Set running state to false
+    }
+
 
   return (
     <div className='stopwatch-container'>
@@ -49,7 +56,7 @@ export const Stopwatch = () => {
         </div>
         <div>
             <button onClick={toggleRunning}>[Start/Stop]</button>
-            <button>[Reset the stopwatch]</button>
+            <button onClick={resetStopwatch}>Reset</button>
         </div>
     </div>
   )
