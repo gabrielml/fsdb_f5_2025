@@ -47,6 +47,28 @@ export const Stopwatch = () => {
         setIsRunning(false); // Set running state to false
     }
 
+    // *** INTERMEDIATE LEVEL ***
+    // Play a beep sound at 10 seconds for the stopwatch
+    useEffect(() => {
+        if (isRunning && seconds === 10) {
+            // Create a simple audio context and oscillator for a beep sound
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            oscillator.frequency.value = 440; // A4 Note
+            gainNode.gain.setValueAtTime(1, audioContext.currentTime);
+
+            oscillator.start();
+            gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.5); // Fade out
+            oscillator.stop(audioContext.currentTime + 0.5);
+        }
+    }, [seconds, isRunning]); // Play sound when seconds reach 10 and stopwatch is running.
+
+
 
   return (
     <div className='stopwatch-container'>
